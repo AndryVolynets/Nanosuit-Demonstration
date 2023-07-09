@@ -1,0 +1,11 @@
+.custom-button {
+    padding: 10px 20px;
+    width: 50%;
+    height: 2%;
+    border: none;
+    background-color: #eaeaea;
+    color: #333;
+    clip-path: polygon(31% 0, 87% 0, 100% 32%, 75% 100%, 12% 100%, 0 63%);
+    transform: translateY(50%);
+  }
+  
