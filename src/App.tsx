@@ -1,12 +1,13 @@
-import React from "react";
-import { TrafaretColor, DefaultColor, HoverColor } from "./constants";
-import { CryScroll, CryButton } from "./components";
-import { url } from "inspector";
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Router from './router';
 
 const App = () => {
     return (
-        <>
-        </>
+
+        <BrowserRouter>
+            <Router />
+        </BrowserRouter>
     );
 }
 
