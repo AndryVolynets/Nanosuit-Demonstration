@@ -7,7 +7,7 @@ interface IProps {
   children: ReactNode;
 }
 
-const OctagonLayout = (props: IProps) => {
+const HexagonLayout = (props: IProps) => {
   const { size, color, children } = props;
 
   const octagonStyle = {
@@ -23,4 +23,4 @@ const OctagonLayout = (props: IProps) => {
   );
 }
 
-export default OctagonLayout;
+export default HexagonLayout;
