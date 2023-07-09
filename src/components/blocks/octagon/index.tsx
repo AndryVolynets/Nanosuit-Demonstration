@@ -11,7 +11,7 @@ const OctagonLayout = (props: IProps) => {
   const { size, color, children } = props;
 
   const octagonStyle = {
-    width: `${size}px`,
+    width: `${size + 10}px`,
     height: `${size}px`,
     backgroundColor: color,
   };

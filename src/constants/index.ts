@@ -1,1 +1,3 @@
-export{}
+export const DefaultColor = "#a2dfc2";
+export const HoverColor = "#ffa20a";
+export const TrafaretColor = "#11ffee00";
