@@ -1,9 +1,0 @@
-.fadingLine {
-    width: 500px;
-    height: 4px;
-    position: absolute;
-    top: 50px;
-    left: 80px;
-    background: linear-gradient(to left, transparent 0%, #789287 100%);
-    transform: skew(-10deg, 2deg);
-}

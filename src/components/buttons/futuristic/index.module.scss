@@ -11,11 +11,16 @@
     font-weight: normal;
     font-size: 16px;
     letter-spacing: 1.8px;
-    width: 220px;
+    width: 100%;
+    /* Используем относительную ширину */
+    max-width: 220px;
+    /* Ограничиваем максимальную ширину кнопки */
     height: 40px;
+    /* Используем фиксированную высоту */
     padding: 0;
     transition: all 0.25s ease;
     outline: none;
+    vertical-align: middle;
 
     -webkit-border-radius: 200px;
     -webkit-border-top-right-radius: 10px;
@@ -32,14 +37,26 @@
 
     cursor: pointer;
 
+    svg {
+      margin-bottom: 3px;
+      margin-right: 1px;
+      color: rgb(144, 199, 170);
+    }
+
     &:hover {
       border: solid 3px rgb(154, 213, 183);
       color: rgb(154, 213, 183);
       border-right: none;
-      border-left: none;  
+      border-left: none;
       box-shadow: 0px 0px 8px rgb(200, 223, 206);
       color: radial-gradient(ellipse at center, rgb(113, 116, 103) 0%, rgb(154, 185, 162) 40%, rgb(196, 221, 208) 50%, rgb(235, 244, 241) 60%, rgb(255, 255, 255) 100%);
       text-shadow: 0 0 1px rgb(200, 223, 206);
+
+      svg {
+        margin-bottom: 3px;
+        margin-right: 1px;
+        color: rgb(154, 213, 183);
+      }
     }
   }
 }

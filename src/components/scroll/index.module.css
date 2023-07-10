@@ -1,12 +1,5 @@
-HTML CSSResult Skip Results Iframe EDIT ON .container {
-    display: flex;
-    margin: 50px;
-    column-gap: 20px;
-}
-
 .scrollbar {
-    height: 300px;
-    width: 50%;
+    height: 350px;
     overflow: auto;
     padding: 0 10px;
 }
@@ -23,5 +16,6 @@ HTML CSSResult Skip Results Iframe EDIT ON .container {
 #scrollbar1::-webkit-scrollbar-thumb {
     background-image: linear-gradient(145deg, #a2dfc2, #a2dfc2 30px, transparent 30px);
     background-repeat: no-repeat;
-    background-size: 13px 100%; /* Adjusted background-size property */
+    background-size: 13px 100%;
+    /* Adjusted background-size property */
 }

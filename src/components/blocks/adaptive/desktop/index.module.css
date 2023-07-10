@@ -1,0 +1,47 @@
+.adaptiveContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .optionsContainer {
+    flex: 1 1 100%;
+    width: 100%;
+    height: 100%;
+    background-color: gold;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  @media (min-width: 768px) {
+    .optionsContainer {
+      flex: 0 0 30%;
+      order: 1;
+    }
+  
+    .modelContainer {
+      flex: 0 0 70%;
+      order: 3;
+    }
+  
+    .descContainer {
+      flex: 1 1 100%;
+      order: 2;
+    }
+  
+    .adaptiveContainer {
+      height: auto;
+    }
+  
+    .optionsContainer,
+    .modelContainer,
+    .descContainer {
+      background-color: green;
+      height: 100%;
+    }
+  }
+  

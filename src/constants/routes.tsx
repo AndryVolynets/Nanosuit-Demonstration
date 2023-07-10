@@ -9,7 +9,7 @@ export const pagesData: IRouterType[] = [
         title: "home"
     },
     {
-        path: "/",
+        path: "/showroom",
         element: <ShowRoom />,
         title: "home"
     },

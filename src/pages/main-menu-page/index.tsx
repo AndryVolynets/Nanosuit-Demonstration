@@ -1,27 +1,41 @@
 import React from "react";
-import { FadingLine } from "../../components";
+import { ContentSnippet, CryButton, CryScroll, FadingLine } from "../../components";
 import { CapitalText } from "../../components";
+import { LineDirections } from "../../types/enums";
+import styles from "./index.module.css"
 
 const MainMenu = () => {
     return (
         <div>
-            <FadingLine />
-            <div
-                style={{
-                    position: "absolute",
-                    top: "100px",
-                    left: "100px",
-                    transform: 'rotateY(20deg)',
-                    perspective: '1000px',
-                    perspectiveOrigin: '50% 50%'
-                }}
-            >
-                <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
-                <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
-                <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
-                <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
-                <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
+            <FadingLine thickness={4} width={500} direction={LineDirections.left} />
+            <FadingLine thickness={4} width={500} direction={LineDirections.right} />
+
+            <div className={styles.flexContainer}>
+                <div>
+                    <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
+                    <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
+                    <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
+                    <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
+                    <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
+                    <CryButton />
+                </div>
+                <div>
+                    <ContentSnippet>
+                        <div style={{padding: 10}}>
+                            <CryScroll>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsum, odio veniam, tempore in cum suscipit saepe quibusdam consectetur sit consequatur eos, doloribus necessitatibus modi. Molestias similique enim quisquam odit.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsum, odio veniam, tempore in cum suscipit saepe quibusdam consectetur sit consequatur eos, doloribus necessitatibus modi. Molestias similique enim quisquam odit.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsum, odio veniam, tempore in cum suscipit saepe quibusdam consectetur sit consequatur eos, doloribus necessitatibus modi. Molestias similique enim quisquam odit.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsum, odio veniam, tempore in cum suscipit saepe quibusdam consectetur sit consequatur eos, doloribus necessitatibus modi. Molestias similique enim quisquam odit.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsum, odio veniam, tempore in cum suscipit saepe quibusdam consectetur sit consequatur eos, doloribus necessitatibus modi. Molestias similique enim quisquam odit.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsum, odio veniam, tempore in cum suscipit saepe quibusdam consectetur sit consequatur eos, doloribus necessitatibus modi. Molestias similique enim quisquam odit.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsum, odio veniam, tempore in cum suscipit saepe quibusdam consectetur sit consequatur eos, doloribus necessitatibus modi. Molestias similique enim quisquam odit.
+                            </CryScroll>
+                        </div>
+                    </ContentSnippet>
+                </div>
             </div>
+
         </div>
     );
 }
