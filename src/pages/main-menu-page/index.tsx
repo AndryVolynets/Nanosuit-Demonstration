@@ -1,5 +1,5 @@
 import React from "react";
-import { CapitalText, ContentSnippet, CryButton, CryScroll, FadingLine } from "../../components";
+import { CalloutBasic, CapitalText, ContentSnippet, CryButton, CryScroll, FadingLine, HexagonGridLayout } from "../../components";
 import { LineDirections } from "../../types/enums";
 import styles from "./index.module.css"
 
@@ -11,11 +11,16 @@ const MainMenu = () => {
                     <div className={styles.fandingLine}>
                         <FadingLine thickness={3} width={'40%'} direction={LineDirections.left} />
                     </div>
-                    <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
-                    <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
-                    <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
-                    <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
-                    <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
+                    <div className={styles.flexMenu}>
+                        <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
+                        <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
+                        <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
+                        <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
+                        <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
+                    </div>
+                    <CalloutBasic>
+                        <HexagonGridLayout />
+                    </CalloutBasic>
                     <div className={styles.navButton}>
                         <CryButton />
                     </div>

@@ -4,7 +4,7 @@ import { CryButtonSearch } from "../buttons";
 const Header = () => {
     return (
         <header>
-            <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
+            <nav className="navbar navbar-expand-lg" style={{  backgroundColor: 'transparent'}}>
                 <div className="container" >
                     <a className="navbar-brand" href="#" style={{ color: '#a2dfc2' }}>Navbar</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

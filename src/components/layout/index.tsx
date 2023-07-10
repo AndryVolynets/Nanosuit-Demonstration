@@ -6,9 +6,9 @@ import Header from "../header";
 const Layout = () => {
     return (
         <div className="container-fluid ">
-            <Header />
             <React.StrictMode>
                 <div className={styles.layout}>
+                    <Header />
                     <Outlet />
                 </div>
             </React.StrictMode>

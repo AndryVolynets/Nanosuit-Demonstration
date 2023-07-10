@@ -6,7 +6,7 @@
 
 #scrollbar1::-webkit-scrollbar {
     width: 13px;
-    border-left: 5px solid #a2dfc2;
+    border-left: 3.5px solid #a2dfc2;
 }
 
 #scrollbar1::-webkit-scrollbar-track {
