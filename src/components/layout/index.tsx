@@ -1,13 +1,17 @@
 import React, { ReactNode } from "react";
 import styles from "./index.module.css"
 import { Outlet } from "react-router-dom";
+import Header from "../header";
 
 const Layout = () => {
     return (
         <div className="container-fluid ">
-            <div className={styles.layout}>
-                <Outlet />
-            </div>
+            <Header />
+            <React.StrictMode>
+                <div className={styles.layout}>
+                    <Outlet />
+                </div>
+            </React.StrictMode>
         </div>
     );
 }

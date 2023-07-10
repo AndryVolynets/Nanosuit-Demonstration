@@ -1,27 +1,31 @@
 import React from "react";
-import { ContentSnippet, CryButton, CryScroll, FadingLine } from "../../components";
-import { CapitalText } from "../../components";
+import { CapitalText, ContentSnippet, CryButton, CryScroll, FadingLine } from "../../components";
 import { LineDirections } from "../../types/enums";
 import styles from "./index.module.css"
 
 const MainMenu = () => {
     return (
-        <div>
-            <FadingLine thickness={4} width={500} direction={LineDirections.left} />
-            <FadingLine thickness={4} width={500} direction={LineDirections.right} />
-
+        <div className="container">
             <div className={styles.flexContainer}>
                 <div>
+                    <div className={styles.fandingLine}>
+                        <FadingLine thickness={3} width={'40%'} direction={LineDirections.left} />
+                    </div>
                     <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
                     <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
                     <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
                     <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
                     <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
-                    <CryButton />
+                    <div className={styles.navButton}>
+                        <CryButton />
+                    </div>
                 </div>
                 <div>
+                    <div className={styles.fandingLine}>
+                        <FadingLine thickness={3} width={'40%'} direction={LineDirections.right} />
+                    </div>
                     <ContentSnippet>
-                        <div style={{padding: 10}}>
+                        <div style={{ padding: 10 }}>
                             <CryScroll>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsum, odio veniam, tempore in cum suscipit saepe quibusdam consectetur sit consequatur eos, doloribus necessitatibus modi. Molestias similique enim quisquam odit.
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsum, odio veniam, tempore in cum suscipit saepe quibusdam consectetur sit consequatur eos, doloribus necessitatibus modi. Molestias similique enim quisquam odit.

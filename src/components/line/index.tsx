@@ -4,7 +4,7 @@ import { LineDirections } from '../../types/enums';
 
 interface FadingLineProps {
   thickness: number;
-  width: number;
+  width: number | string;
   direction: LineDirections;
 }
 
