@@ -12,15 +12,14 @@ const MainMenu = () => {
                         <FadingLine thickness={3} width={'40%'} direction={LineDirections.left} />
                     </div>
                     <div className={styles.flexMenu}>
-                        <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
-                        <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
-                        <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
-                        <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
-                        <CapitalText to="/" text="Демонстрация нанокостюма" fontSize={24} />
+                        <CapitalText to="/showroom" text="Демонстрация нанокостюма" fontSize={24} />
+                        <CapitalText to="/showroom" text="Демонстрация нанокостюма" fontSize={24} />
+                        <CapitalText to="/showroom" text="Демонстрация нанокостюма" fontSize={24} />
+                        <CapitalText to="/showroom" text="Демонстрация нанокостюма" fontSize={24} />
+                        <CapitalText to="/showroom" text="Демонстрация нанокостюма" fontSize={24} />
                     </div>
-                    <CalloutBasic>
                         <HexagonGridLayout />
-                    </CalloutBasic>
+                    
                     <div className={styles.navButton}>
                         <CryButton />
                     </div>

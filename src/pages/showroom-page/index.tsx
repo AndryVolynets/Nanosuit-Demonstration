@@ -1,15 +1,113 @@
 import React from "react";
-import { DesktopLayout } from "../../components/blocks";
+import { DesktopLayout, ContentSnippet, HexagonGridLayout } from "../../components/blocks";
 import styles from "./index.module.scss"
+import { ModuleOption } from "../../components/buttons";
+import { CapitalText, CryScroll, FadingLine } from "../../components";
+import { LineDirections } from "../../types/enums";
+import { CalloutBasic } from "../../components";
+
 
 const ShowRoom = () => {
     return (
         <div className={styles.adaptiveContainer}>
             <div className={styles.optionsContainer}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque recusandae magnam vel mollitia cupiditate rerum vero, quod error ullam facilis, explicabo suscipit nulla blanditiis voluptatem nostrum totam. Quis, ut autem.
+                <div style={{ marginTop: 15 }}>
+                    <CalloutBasic>
+                        <HexagonGridLayout />
+                    </CalloutBasic>
+                </div>
+                <div style={{ marginTop: 15 }}>
+                    <CalloutBasic>
+                        <HexagonGridLayout />
+                    </CalloutBasic>
+                </div>
+                <div style={{ marginTop: 15 }}>
+                    <CalloutBasic>
+                        <HexagonGridLayout />
+                    </CalloutBasic>
+                </div>
+                <div style={{ marginTop: 15 }}>
+                    <CalloutBasic>
+                        <HexagonGridLayout />
+                    </CalloutBasic>
+                </div>
+                <div style={{ marginTop: 15 }}>
+                    <CalloutBasic>
+                        <HexagonGridLayout />
+                    </CalloutBasic>
+                </div>
             </div>
-            <div className={styles.modelContainer}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, ex! Voluptatibus ipsum expedita vero earum, accusamus adipisci rerum maxime itaque soluta necessitatibus nihil voluptatem dolorum. Veritatis accusamus voluptate reiciendis illum?</div>
-            <div className={styles.descContainer}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vitae quis atque nesciunt sapiente quam asperiores sequi corrupti commodi maiores, obcaecati minima, eum nulla maxime, similique quibusdam eveniet est perferendis.</div>
+            <div className={styles.modelContainer}>
+
+                <div className="">
+                    <iframe
+                        title="Crysis 2 Nanosuit"
+                        frameBorder="0"
+                        width={"100%"}
+                        height={"600"}
+                        allowFullScreen={true}
+                        allow="autoplay; fullscreen; xr-spatial-tracking"
+                        xr-spatial-tracking
+                        execution-while-out-of-viewport
+                        execution-while-not-rendered
+                        web-share
+                        src="https://sketchfab.com/models/824cd0e86fd04e7eb6d0a1fef5463f2d/embed?ui_theme=dark"
+                    ></iframe>
+                    <p
+                        style={{
+                            fontSize: '13px',
+                            fontWeight: 'normal',
+                            margin: '5px',
+                            color: '#4A4A4A',
+                        }}
+                    >
+                    </p>
+                </div>
+
+            </div>
+            <div className={styles.descContainer}>
+                <div style={{ padding: 10 }}>
+                    <CryScroll>
+                        <h1>Поправка</h1>
+                        <FadingLine thickness={3} width={'40%'} direction={LineDirections.left} />
+
+                        <div style={{ marginTop: 10 }}>
+                            <CapitalText
+                                to="/"
+                                fontSize={14}
+                                text="* Value vaksfkaskfask"
+                            />
+                            <CapitalText
+                                to="/"
+                                fontSize={14}
+                                text="* Value vaksfkaskfask"
+                            />
+                            <CapitalText
+                                to="/"
+                                fontSize={14}
+                                text="* Value vaksfkaskfask"
+                            />
+                            <CapitalText
+                                to="/"
+                                fontSize={14}
+                                text="* Value vaksfkaskfask"
+                            />
+
+                            <FadingLine thickness={3} width={'40%'} direction={LineDirections.left} />
+
+                            <div style={{ marginTop: 10 }}>
+                                <ContentSnippet>
+                                    <div style={{ padding: 10 }}>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, voluptatum ratione temporibus non sequi velit, vel nulla neque suscipit cupiditate dolorem asperiores. Tempora exercitationem tempore sit nam sed cupiditate ipsam.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, voluptatum ratione temporibus non sequi velit, vel nulla neque suscipit cupiditate dolorem asperiores. Tempora exercitationem tempore sit nam sed cupiditate ipsam.
+                                    </div>
+                                </ContentSnippet>
+                            </div>
+                        </div>
+                    </CryScroll>
+                </div>
+            </div>
+
         </div>
     );
 }
