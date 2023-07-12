@@ -11,31 +11,7 @@ const ShowRoom = () => {
     return (
         <div className={styles.adaptiveContainer}>
             <div className={styles.optionsContainer}>
-                <div style={{ marginTop: 15 }}>
-                    <CalloutBasic>
-                        <HexagonGridLayout />
-                    </CalloutBasic>
-                </div>
-                <div style={{ marginTop: 15 }}>
-                    <CalloutBasic>
-                        <HexagonGridLayout />
-                    </CalloutBasic>
-                </div>
-                <div style={{ marginTop: 15 }}>
-                    <CalloutBasic>
-                        <HexagonGridLayout />
-                    </CalloutBasic>
-                </div>
-                <div style={{ marginTop: 15 }}>
-                    <CalloutBasic>
-                        <HexagonGridLayout />
-                    </CalloutBasic>
-                </div>
-                <div style={{ marginTop: 15 }}>
-                    <CalloutBasic>
-                        <HexagonGridLayout />
-                    </CalloutBasic>
-                </div>
+               
             </div>
             <div className={styles.modelContainer}>
 
