@@ -8,14 +8,16 @@ interface FadingLineProps {
   direction: LineDirections;
 }
 
-const FadingLine: React.FC<FadingLineProps> = ({ thickness, width, direction }) => {
-  const lineStyle: CSSProperties = {
-    width: `${width}px`,
-    height: `${thickness}px`,
-    background: `linear-gradient(to ${LineDirections[direction]}, transparent 0%, #789287 100%)`,
-  };
+const FadingLine: React.FC<FadingLineProps> =
+  ({ thickness, width, direction }) => { 
+    const lineStyle: CSSProperties = {
+      width: `${width}px`,
+      height: `${thickness}px`,
+      background: `linear-gradient(to ${LineDirections[direction]}, transparent 0%, #789287 100%)`,
+      clipPath: 'polygon(0% 0%, 0 0, 100% 50%, 0 100%, 0 100%)'
+    };
 
-  return <div className={styles.fadingLine} style={lineStyle}></div>;
-};
+    return <div className={styles.fadingLine} style={lineStyle}></div>;
+  };
 
 export default FadingLine;

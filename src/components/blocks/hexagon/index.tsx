@@ -13,7 +13,7 @@ const HexagonLayout = (props: IProps) => {
   const octagonStyle = {
     width: `${size + 10}px`,
     height: `${size}px`,
-    backgroundColor: color,
+    backgroundColor: color
   };
 
   return (
