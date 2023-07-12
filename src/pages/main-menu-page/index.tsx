@@ -18,7 +18,7 @@ const MainMenu = () => {
                         <CapitalText to="/showroom" text="Демонстрация нанокостюма" fontSize={24} />
                         <CapitalText to="/showroom" text="Демонстрация нанокостюма" fontSize={24} />
                     </div>
-                    <HexagonGridLayout xSegments={4} ySegments={1} sizeSegments={100} />
+                    <HexagonGridLayout xSegments={4} ySegments={1} sizeSegments={100}/>
                     <div className={styles.navButton}>
                         <CryButton />
                     </div>

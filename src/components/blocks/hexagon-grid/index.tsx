@@ -32,12 +32,14 @@ const Segment = (props: ISegment) => {
 };
 
 const HexagonGridLayout = (props: IHexagonGrid) => {
-    const { xSegments, ySegments, sizeSegments } = props;
-    const n = xSegments + 1;
-    const m = ySegments * 2 + 1;
+    const { xSegments, ySegments, sizeSegments, closed, reverd } = props;
+    const isClosed = closed ?? false;
 
+    const n = xSegments;
+    const m = ySegments * 2 + 1;
+    
     const gtc = (sizeSegments + (sizeSegments < 100 ? 15 : 11) + sizeSegments / 2.0) / 2;
-    const gtr = (sizeSegments + sizeSegments * (ySegments > 1 ? sizeSegments % 0.05 : 0)) / 2;
+    const gtr = (sizeSegments + sizeSegments * (ySegments > 1 || isClosed ? sizeSegments % 0.05 : 0)) / 2;
 
     const gridParentStyle = {
         display: 'grid',
@@ -45,14 +47,37 @@ const HexagonGridLayout = (props: IHexagonGrid) => {
         gridTemplateRows: `repeat(${m}, ${gtr}px)`,
     };
 
+    const isExist = (value: any): boolean => {
+        return value !== undefined && value !== null;
+    };
+
+    const isExistAndTrue = (value: any): boolean => {
+        return isExist(value) && value === true;
+    };
+
     const generateGridArea = (): JSX.Element[] => {
         const blocks: JSX.Element[] = [];
 
         for (let i = 1; i < m; i += 2) {
-            for (let j = 1; j < n; j++) {
-                let i_new = j % 2 !== 0 ? i + 1 : i;
+            for (let j = 1; j <= n; j++) {
+                let i_new = (isExistAndTrue(reverd) ? j % 2 === 0 : j % 2 !== 0) ? i + 1 : i;
+
                 blocks.push(
-                    <div key={`${i}-${j}`} style={{ gridArea: `${i_new} / ${j} / ${i_new + 2} / ${j + 2}` }}>
+                    <div key={`${i_new}-${j}`} style={{ gridArea: `${i_new} / ${j} / ${i_new + 2} / ${j + 2}` }}>
+                        <Segment sizeSegments={sizeSegments} />
+                    </div>
+                );
+            }
+        }
+
+        if (isExistAndTrue(closed)) {
+            let lastRow = m - 1;
+
+            for (let j = 1; j < n; j += 2) {
+                let i_new = j % 2 !== 0 ? lastRow + 1 : lastRow;
+                
+                blocks.push(
+                    <div key={`${i_new}-${j}`} style={{ gridArea: `${i_new} / ${j + 1} / ${i_new + 2} / ${j + 2}` }}>
                         <Segment sizeSegments={sizeSegments} />
                     </div>
                 );
