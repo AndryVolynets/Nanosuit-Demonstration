@@ -3,7 +3,56 @@ import { CalloutBasic, CapitalText, ContentSnippet, CryButton, CryScroll, Fading
 import { LineDirections } from "../../types/enums";
 import styles from "./index.module.css"
 
+import { CiSettings, CiMobile3 } from "react-icons/ci";
+import { GiArtificialHive } from "react-icons/gi";
+import { TbDatabaseExclamation } from "react-icons/tb";
+
+import { IconType } from "react-icons/lib";
+
+interface ICapitalText {
+    to: string;
+    text?: string;
+    fontSize?: number;
+    icon: IconType
+}
+
 const MainMenu = () => {
+    const capitalTextData: ICapitalText[] = [
+        {
+            to: "/showroom",
+            text: "Демонстрация нанокостюма",
+            icon: GiArtificialHive
+        },
+        {
+            to: "/showroom",
+            text: "Архивы Карла Раша",
+            icon: TbDatabaseExclamation
+        },
+        {
+            to: "/showroom",
+            text: "Личное дело",
+            icon: CiMobile3
+        },
+        {
+            to: "/showroom",
+            text: "Настройки",
+            icon: CiSettings
+        }
+    ];
+
+    const CapitalTextList: React.FC = () => {
+        return (
+            <>
+                {capitalTextData.map((item, index) => (
+                    <CapitalText key={index} href={item.to} style={{fontSize: 24}}>
+                        <span>{<item.icon height="1.5em" width="1.5em" />}</span>
+                        {item.text}
+                    </CapitalText>
+                ))}
+            </>
+        );
+    }
+
     return (
         <div className="container">
             <div className={styles.flexContainer}>
@@ -12,13 +61,9 @@ const MainMenu = () => {
                         <FadingLine thickness={3} width={'40%'} direction={LineDirections.left} />
                     </div>
                     <div className={styles.flexMenu}>
-                        <CapitalText to="/showroom" text="Демонстрация нанокостюма" fontSize={24} />
-                        <CapitalText to="/showroom" text="Демонстрация нанокостюма" fontSize={24} />
-                        <CapitalText to="/showroom" text="Демонстрация нанокостюма" fontSize={24} />
-                        <CapitalText to="/showroom" text="Демонстрация нанокостюма" fontSize={24} />
-                        <CapitalText to="/showroom" text="Демонстрация нанокостюма" fontSize={24} />
+                        <CapitalTextList />
                     </div>
-                    <HexagonGridLayout xSegments={4} ySegments={1} sizeSegments={76}/>
+                    <HexagonGridLayout xSegments={4} ySegments={1} sizeSegments={76} />
                     <div className={styles.navButton}>
                         <CryButton>
                             Назад

@@ -15,7 +15,7 @@ const ShowRoom = () => {
             </div>
             <div className={styles.modelContainer}>
                 <div className={styles.imageDefault}>
-                    <CryButton/>
+
                 </div>
             </div>
             <div className={styles.descContainer}>
@@ -25,26 +25,7 @@ const ShowRoom = () => {
                         <FadingLine thickness={3} width={'40%'} direction={LineDirections.left} />
 
                         <div style={{ marginTop: 10 }}>
-                            <CapitalText
-                                to="/"
-                                fontSize={14}
-                                text="* Value vaksfkaskfask"
-                            />
-                            <CapitalText
-                                to="/"
-                                fontSize={14}
-                                text="* Value vaksfkaskfask"
-                            />
-                            <CapitalText
-                                to="/"
-                                fontSize={14}
-                                text="* Value vaksfkaskfask"
-                            />
-                            <CapitalText
-                                to="/"
-                                fontSize={14}
-                                text="* Value vaksfkaskfask"
-                            />
+                        
 
                             <FadingLine thickness={3} width={'40%'} direction={LineDirections.left} />
 

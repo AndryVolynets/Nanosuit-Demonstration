@@ -1,10 +1,10 @@
-import React, { FunctionComponent } from 'react';
+import React, { FC } from 'react';
 import styles from './index.module.scss';
-import { IIntrinsicElements } from './../../../types/interfaces';
+import { IntrinsicElements } from './../../../types/interfaces';
 
-type CryButtonProps = IIntrinsicElements['button'];
+type CryButtonProps = IntrinsicElements['button'];
 
-const CryButton: FunctionComponent<CryButtonProps> = (props) => {
+const CryButton: FC<CryButtonProps> = (props) => {
     const { children } = props;
 
     return (

@@ -65,7 +65,8 @@ const HexagonGridLayout = (props: IHexagonGrid) => {
 
         for (let i = 1; i < m; i += 2) {
             for (let j = 1; j <= n; j++) {
-                let i_new = (isExistAndTrue(reverd) ? j % 2 === 0 : j % 2 !== 0) ? i + 1 : i;
+                let i_new = (isExistAndTrue(reverd) ? j % 2 === 0 : j % 2 !== 0) ?
+                    i + 1 : i;
 
                 blocks.push(
                     <div key={`${i_new}-${j}`} style={{ gridArea: `${i_new} / ${j} / ${i_new + 2} / ${j + 2}` }}>

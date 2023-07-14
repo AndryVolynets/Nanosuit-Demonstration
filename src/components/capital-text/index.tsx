@@ -1,20 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from './index.module.css'
+import { IntrinsicElements } from "../../types/interfaces/IntrinsicElements";
 
-interface ICapitalText {
-    to: string;
-    text?: string;
-    fontSize?: number;
-}
+type TextProp = IntrinsicElements["a"];
 
-const CapitalText = (props: ICapitalText) => {
-    const { to, text, fontSize } = props;
+const CapitalText: React.FC<TextProp> = (props) => {
+    const { children } = props;
 
     return (
-        <Link to={to} className={styles.capital} style={{ fontSize: fontSize }}>
-            {text}
-        </Link>
+        <a {...props} className={styles.capital}>
+            {children}
+        </a>
     );
 }
 
