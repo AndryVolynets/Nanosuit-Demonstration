@@ -1,0 +1,7 @@
+.backgroundLayout {
+    background-image: url("./../../../assets/img/background//Crysis\ 3.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    height: 100vh;
+}

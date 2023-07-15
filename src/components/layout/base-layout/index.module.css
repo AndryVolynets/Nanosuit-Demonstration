@@ -1,0 +1,9 @@
+.mainContent {
+    perspective: 1000px;
+    display: block;
+}
+
+.mainContent {
+    width: 90%;
+    height: 90%;
+}

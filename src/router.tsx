@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { IRouterType } from './types/interfaces';
 import pagesData from './constants';
-import { Layout } from './components'
+import { Layout } from './constants/routes';
 import { Error } from './pages';
 
 const Router = () => {
@@ -15,7 +15,7 @@ const Router = () => {
             <Route element={<Layout />}>
                 {pageRoutes}
             </Route>
-            <Route key="not-found" path="*" element={<Error/>} />
+            <Route key="not-found" path="*" element={<Error />} />
         </Routes>
     );
 };

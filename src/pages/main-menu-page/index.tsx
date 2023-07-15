@@ -44,7 +44,7 @@ const MainMenu = () => {
         return (
             <>
                 {capitalTextData.map((item, index) => (
-                    <CapitalText key={index} href={item.to} style={{fontSize: 24}}>
+                    <CapitalText key={index} href={item.to} style={{ fontSize: 24 }}>
                         <span>{<item.icon height="1.5em" width="1.5em" />}</span>
                         {item.text}
                     </CapitalText>
