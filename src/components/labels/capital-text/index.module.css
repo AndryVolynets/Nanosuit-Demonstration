@@ -1,0 +1,19 @@
+.capital {
+    color: #9ad5b7;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    margin: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.capital:hover {
+    color: #ffa20a;
+    cursor: pointer;
+    text-shadow: #ffa20a 2px 0 20px;
+    transition: 0.2s;
+    transform: scale(1.1);
+
+}
