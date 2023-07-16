@@ -4,7 +4,7 @@
   "private": true,
   "description": "",
   "keywords": [],
-  "main": "src/index.jsx",
+  "main": "./src/index.tsx",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
