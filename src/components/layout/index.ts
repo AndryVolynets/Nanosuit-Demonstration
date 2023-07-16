@@ -1,4 +1,5 @@
 import BaseLayout from "./base-layout";
 import BackgroundLayout from "./background-layout";
+import PerspectLayout from "./perspect-layout";
 
-export { BaseLayout, BackgroundLayout };
+export { BaseLayout, PerspectLayout, BackgroundLayout };

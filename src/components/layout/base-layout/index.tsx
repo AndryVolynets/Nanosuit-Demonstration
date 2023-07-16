@@ -13,7 +13,7 @@ const BaseLayout: React.FC<DividerProps> = (props) => {
             <div className="header">
                 <Header />
             </div>
-            <div ref={bendContainerRef} className={styles.mainContent} style={{ transform: `${perspectiveStyle}` }}>
+            <div>
                 {children}
             </div>
         </div>

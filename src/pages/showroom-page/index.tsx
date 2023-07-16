@@ -2,7 +2,7 @@ import React from "react";
 import { DesktopLayout, ContentSnippet, HexagonGridLayout } from "../../components/blocks";
 import styles from "./index.module.scss"
 import { CryButton, ModuleOption } from "../../components/buttons";
-import { CapitalText, CryScroll, FadingLine } from "../../components";
+import { CalloutOption, CapitalText, CryScroll, FadingLine } from "../../components";
 import { LineDirections } from "../../types/enums";
 import { CalloutBasic } from "../../components";
 
@@ -11,7 +11,9 @@ const ShowRoom = () => {
     return (
         <div className={styles.adaptiveContainer}>
             <div className={styles.optionsContainer}>
-
+                <CalloutOption>
+                    <HexagonGridLayout xSegments={4} ySegments={1} sizeSegments={70} />
+                </CalloutOption>
             </div>
             <div className={styles.modelContainer}>
                 <div className={styles.imageDefault}>
@@ -25,7 +27,7 @@ const ShowRoom = () => {
                         <FadingLine thickness={3} width={'40%'} direction={LineDirections.left} />
 
                         <div style={{ marginTop: 10 }}>
-                        
+
 
                             <FadingLine thickness={3} width={'40%'} direction={LineDirections.left} />
 

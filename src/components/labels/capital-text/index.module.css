@@ -2,8 +2,8 @@
     color: #9ad5b7;
     text-transform: uppercase;
     text-decoration: none;
-    display: block;
-    margin: 10px;
+    display: inline-block;
+    margin: 5px;
     bottom: 10px;
     cursor: pointer;
     z-index: 100;

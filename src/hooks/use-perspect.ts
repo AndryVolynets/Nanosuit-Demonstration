@@ -11,7 +11,7 @@ export const usePerspective = () => {
             const bendContainer = bendContainerRef.current;
             if (!bendContainer) return;
 
-            const { offsetWidth, offsetHeight, offsetLeft, offsetTop } = bendContainer;
+            const { offsetWidth, offsetHeight, offsetLeft, offsetTop, style } = bendContainer;
             const perspective = 10;
 
             const rotateX = ((e.pageY - offsetTop) / offsetHeight - 0.5) * perspective;
@@ -19,7 +19,7 @@ export const usePerspective = () => {
 
             const transformStyle = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 
-            bendContainer.style.transform = transformStyle;
+            style.transform = transformStyle;
             setPerspectiveStyle(transformStyle);
         };
 

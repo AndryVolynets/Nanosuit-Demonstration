@@ -4,10 +4,9 @@ import { ShowRoom, MainMenu } from '../pages';
 import { BackgroundLayout, BaseLayout } from '../components';
 import { DividerProps } from '@fluentui/react-components';
 import { Outlet } from 'react-router-dom';
+import { PerspectLayout } from '../components/layout';
 
 export const Layout: React.FC<DividerProps> = (props) => {
-    const { children } = props;
-
     return (
         <BackgroundLayout>
             <BaseLayout {...props}>
@@ -20,7 +19,10 @@ export const Layout: React.FC<DividerProps> = (props) => {
 export const pagesData: IRouterType[] = [
     {
         path: "/",
-        element: <MainMenu />,
+        element:
+            <PerspectLayout>
+                <MainMenu />
+            </PerspectLayout>,
         title: "home"
     },
     {

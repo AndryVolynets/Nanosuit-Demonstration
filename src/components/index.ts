@@ -4,8 +4,9 @@ import CapitalText from "./labels/capital-text";
 import { ContentSnippet } from "./blocks";
 import Header from "./header";
 import { CalloutBasic } from "./surfaces/callout";
-import { BackgroundLayout } from "./layout";
+import { CalloutOption } from "./surfaces/option-callout";
 
+export { CalloutOption };
 export { HexagonLayout, HexagonGridLayout, } from "./blocks";
 export { CryButton, CryButtonSearch } from "./buttons";
 

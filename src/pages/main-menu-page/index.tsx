@@ -1,19 +1,25 @@
 import React from "react";
-import { CalloutBasic, CapitalText, ContentSnippet, CryButton, CryScroll, FadingLine, HexagonGridLayout } from "../../components";
-import { LineDirections } from "../../types/enums";
-import styles from "./index.module.css"
-
+import { IconType } from "react-icons/lib";
 import { CiSettings, CiMobile3 } from "react-icons/ci";
 import { GiArtificialHive } from "react-icons/gi";
 import { TbDatabaseExclamation } from "react-icons/tb";
-
-import { IconType } from "react-icons/lib";
+import { CapitalText, ContentSnippet, CryButton, CryScroll, FadingLine, HexagonGridLayout } from "../../components";
+import styles from "./index.module.css";
+import useSound from "../../hooks/use-sound";
+import hoverSound from './../../assets/audio/click/click.mp3';
+import { AiFillStar } from "react-icons/ai";
 
 interface ICapitalText {
     to: string;
     text?: string;
     fontSize?: number;
     icon: IconType
+}
+
+const SingleStar = () => {
+    return (
+        <AiFillStar width={15} height={15} className={styles.singleStar} />
+    );
 }
 
 const MainMenu = () => {
@@ -39,41 +45,45 @@ const MainMenu = () => {
             icon: CiSettings
         }
     ];
+    const [handleMouseEnter, handleMouseLeave] = useSound(hoverSound);
 
     const CapitalTextList: React.FC = () => {
         return (
             <>
                 {capitalTextData.map((item, index) => (
-                    <CapitalText key={index} href={item.to} style={{ fontSize: 24 }}>
-                        <span>{<item.icon height="1.5em" width="1.5em" />}</span>
-                        {item.text}
-                    </CapitalText>
+                    <div key={index}>
+                        <CapitalText
+                            href={item.to}
+                            style={{ fontSize: 24 }}
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}>
+                            <span>
+                                <SingleStar />
+                            </span>
+                            {item.text}
+                        </CapitalText>
+                    </div>
                 ))}
             </>
         );
     }
 
+
     return (
         <div className="container">
             <div className={styles.flexContainer}>
-                <div>
-                    <div className={styles.fandingLine}>
-                        <FadingLine thickness={3} width={'40%'} direction={LineDirections.left} />
-                    </div>
-                    <div className={styles.flexMenu}>
+                <div className={styles.flexLeft}>
+                    <div>
                         <CapitalTextList />
                     </div>
-                    <HexagonGridLayout xSegments={4} ySegments={1} sizeSegments={76} />
+
                     <div className={styles.navButton}>
                         <CryButton>
                             Назад
                         </CryButton>
                     </div>
                 </div>
-                <div>
-                    <div className={styles.fandingLine}>
-                        <FadingLine thickness={3} width={'40%'} direction={LineDirections.right} />
-                    </div>
+                <div >
                     <ContentSnippet>
                         <div style={{ padding: 10 }}>
                             <CryScroll>
@@ -89,7 +99,6 @@ const MainMenu = () => {
                     </ContentSnippet>
                 </div>
             </div>
-
         </div>
     );
 }

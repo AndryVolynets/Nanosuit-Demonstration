@@ -1,0 +1,21 @@
+.optionButton {
+    border: none;
+    margin: 15px;
+    border-left: 4px solid #a2dfc2;
+    background-color: transparent;
+    color: #a2dfc2;
+}
+
+.optionButton:hover {
+    border-left: 4px solid #ffa20a;
+    background-color: transparent;
+    color: #ffa20a;
+
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
+
+.callout {
+    background-color: transparent;
+}

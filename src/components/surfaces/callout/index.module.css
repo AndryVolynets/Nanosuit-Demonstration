@@ -1,21 +1,9 @@
 .optionButton {
     border: none;
-    margin: 15px;
-    border-left: 4px solid #a2dfc2;
-    background-color: transparent;
     color: #a2dfc2;
+    cursor: pointer;
 }
 
 .optionButton:hover {
-    border-left: 4px solid #ffa20a;
-    background-color: transparent;
-    color: #ffa20a;
-
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.callout {
-    background-color: #ffffff;
-    opacity: .4;
+    color: #a2dfc2;
 }
