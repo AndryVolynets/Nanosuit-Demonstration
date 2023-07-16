@@ -1,19 +1,29 @@
+import { ContentSnippet, HexagonLayout, HexagonGridLayout } from "./blocks";
+import { CryButton, CryButtonSearch, ModuleOption } from "./buttons";
+import Footer from "./footer";
+import Header from "./header";
+import CapitalText from "./labels/capital-text";
+import { BaseLayout, BackgroundLayout, PerspectLayout } from "./layout";
 import FadingLine from "./line";
 import CryScroll from "./scroll";
-import CapitalText from "./labels/capital-text";
-import { ContentSnippet } from "./blocks";
-import Header from "./header";
-import { CalloutBasic } from "./surfaces/callout";
-import { CalloutOption } from "./surfaces/option-callout";
+import { CalloutBasic, CalloutOption } from "./surfaces";
 
-export { CalloutOption };
-export { HexagonLayout, HexagonGridLayout, } from "./blocks";
-export { CryButton, CryButtonSearch } from "./buttons";
 
-export { CryScroll };
-export { BackgroundLayout, BaseLayout } from "./layout";
-export { FadingLine };
-export { CapitalText };
-export { ContentSnippet };
-export { Header };
-export { CalloutBasic };
+export {
+    ContentSnippet,
+    HexagonLayout,
+    HexagonGridLayout,
+    CryButton,
+    CryButtonSearch,
+    ModuleOption,
+    Footer,
+    Header,
+    CapitalText,
+    BaseLayout,
+    BackgroundLayout,
+    PerspectLayout,
+    FadingLine,
+    CryScroll,
+    CalloutBasic,
+    CalloutOption
+}

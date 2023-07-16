@@ -1,13 +1,17 @@
 import React from "react";
 import { IconType } from "react-icons/lib";
-import { CiSettings, CiMobile3 } from "react-icons/ci";
+import styles from "./index.module.css";
+
+import { AiFillStar } from "react-icons/ai";
+import { CiMobile3, CiSettings } from "react-icons/ci";
 import { GiArtificialHive } from "react-icons/gi";
 import { TbDatabaseExclamation } from "react-icons/tb";
+
 import { CapitalText, ContentSnippet, CryButton, CryScroll, FadingLine, HexagonGridLayout } from "../../components";
-import styles from "./index.module.css";
+
 import useSound from "../../hooks/use-sound";
 import hoverSound from './../../assets/audio/click/click.mp3';
-import { AiFillStar } from "react-icons/ai";
+
 
 interface ICapitalText {
     to: string;

@@ -1,8 +1,7 @@
-import { DependencyList, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const usePerspective = () => {
     const bendContainerRef = useRef<HTMLDivElement | null>(null);
-    const EmptyArray: DependencyList = [];
 
     const [perspectiveStyle, setPerspectiveStyle] = useState<string>("");
 
@@ -31,7 +30,7 @@ export const usePerspective = () => {
         return () => {
             bendContainer.removeEventListener("mousemove", handleMouseMove);
         };
-    }, EmptyArray);
+    }, []);
 
     return [bendContainerRef, perspectiveStyle] as const;
 };

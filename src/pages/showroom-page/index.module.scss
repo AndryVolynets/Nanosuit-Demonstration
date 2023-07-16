@@ -1,4 +1,7 @@
 .adaptiveContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: grid;
   grid-template-columns: 0.7fr 1fr 0.7fr;
   grid-template-rows: repeat(2, 1fr);
@@ -17,8 +20,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  height: 100%; /* Высота равна высоте экрана */
-  width: 100%; /* Ширина равна ширине блока */
+  height: 100%;
+  /* Высота равна высоте экрана */
+  width: 100%;
+  /* Ширина равна ширине блока */
 }
 
 .optionsContainer,
