@@ -32,9 +32,7 @@ export const pagesData: IRouterType[] = [
         element:
             <BackgroundLayout>
                 <BaseLayout>
-                    <PerspectLayout>
-                        <ShowRoom />
-                    </PerspectLayout>
+                    <ShowRoom />
                 </BaseLayout>
             </BackgroundLayout>,
         title: "showroom"

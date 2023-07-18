@@ -2,6 +2,8 @@
 export interface Module {
     Icon: string;
     Title: string;
+    Description: string;
+    Features: string[];
 }
 
 export interface Item {
