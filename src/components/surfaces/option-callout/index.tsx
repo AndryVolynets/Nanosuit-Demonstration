@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { Callout,DirectionalHint } from '@fluentui/react';
+import { Callout, CalloutContentBase, DirectionalHint } from '@fluentui/react';
 import { useBoolean, useId } from '@fluentui/react-hooks';
 import { DefaultButton } from '@fluentui/react/lib/Button';
 import { IChild } from '../../../types/interfaces';
 import styles from "./index.module.css"
+
 
 export const CalloutOption: React.FunctionComponent<IChild> = (props) => {
     const [isCalloutVisible, { toggle: toggleIsCalloutVisible }] = useBoolean(false);
@@ -13,7 +14,7 @@ export const CalloutOption: React.FunctionComponent<IChild> = (props) => {
     const { children } = props;
 
     return (
-        <>
+        <div className={styles.callout}>
             <DefaultButton
                 className={styles.optionButton}
                 id={buttonId}
@@ -32,22 +33,21 @@ export const CalloutOption: React.FunctionComponent<IChild> = (props) => {
                     />
                 </svg>
             </DefaultButton>
-            {
-                isCalloutVisible && (
-                    <Callout
-                        ariaLabelledBy={labelId}
-                        ariaDescribedBy={descriptionId}
-                        gapSpace={0}
-                        target={`#${buttonId}`}
-                        onDismiss={toggleIsCalloutVisible}
-                        setInitialFocus
-                        backgroundColor=' transparent'
-                        directionalHint={DirectionalHint.rightCenter}
-                    >
-                        {children}
-                    </Callout>
-                )
-            }
-        </>
+            <div className={styles.calloutContentBase}>
+                {
+                    isCalloutVisible && (
+                        <CalloutContentBase
+                            ariaLabelledBy={labelId}
+                            ariaDescribedBy={descriptionId}
+                            target={`#${buttonId}`}
+                            onDismiss={toggleIsCalloutVisible}
+                            directionalHint={DirectionalHint.rightCenter}
+                        >
+                            {children}
+                        </CalloutContentBase>
+                    )
+                }
+            </div>
+        </div>
     );
 };

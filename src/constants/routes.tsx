@@ -4,15 +4,13 @@ import { ShowRoom, MainMenu } from '../pages';
 import { BackgroundLayout, BaseLayout } from '../components';
 import { DividerProps } from '@fluentui/react-components';
 import { Outlet } from 'react-router-dom';
-import { PerspectLayout } from '../components/layout';
+import { PerspectLayout, ShowroomLayout } from '../components/layout';
 
 export const Layout: React.FC<DividerProps> = (props) => {
     return (
-        <BackgroundLayout>
-            <BaseLayout>
-                <Outlet />
-            </BaseLayout>
-        </BackgroundLayout>
+
+        <Outlet />
+
     );
 }
 
@@ -20,15 +18,25 @@ export const pagesData: IRouterType[] = [
     {
         path: "/",
         element:
-
-            <PerspectLayout>
-                <MainMenu />
-            </PerspectLayout>,
+            <BackgroundLayout>
+                <BaseLayout>
+                    <PerspectLayout>
+                        <MainMenu />
+                    </PerspectLayout>
+                </BaseLayout>
+            </BackgroundLayout>,
         title: "home"
     },
     {
         path: "/showroom",
-        element: <ShowRoom />,
+        element:
+            <BackgroundLayout>
+                <BaseLayout>
+                    <PerspectLayout>
+                        <ShowRoom />
+                    </PerspectLayout>
+                </BaseLayout>
+            </BackgroundLayout>,
         title: "showroom"
     },
 ];

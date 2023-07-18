@@ -1,9 +1,9 @@
-import { ContentSnippet, HexagonLayout, HexagonGridLayout } from "./blocks";
+import { ContentSnippet, HexagonLayout } from "./blocks";
 import { CryButton, CryButtonSearch, ModuleOption } from "./buttons";
 import Footer from "./footer";
 import Header from "./header";
 import CapitalText from "./labels/capital-text";
-import { BaseLayout, BackgroundLayout, PerspectLayout } from "./layout";
+import { BaseLayout, BackgroundLayout, PerspectLayout, ShowroomLayout } from "./layout";
 import FadingLine from "./line";
 import CryScroll from "./scroll";
 import { CalloutBasic, CalloutOption } from "./surfaces";
@@ -12,7 +12,6 @@ import { CalloutBasic, CalloutOption } from "./surfaces";
 export {
     ContentSnippet,
     HexagonLayout,
-    HexagonGridLayout,
     CryButton,
     CryButtonSearch,
     ModuleOption,
@@ -25,5 +24,6 @@ export {
     FadingLine,
     CryScroll,
     CalloutBasic,
-    CalloutOption
+    CalloutOption,
+    ShowroomLayout
 }

@@ -1,60 +1,57 @@
 .adaptiveContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: grid;
-  grid-template-columns: 0.7fr 1fr 0.7fr;
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  height: 100vh;
-
-  @media (max-width: 1000px) {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: 0.7fr 1fr 0.7fr;
     grid-template-rows: repeat(2, 1fr);
-  }
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100%;
+
+    @media (max-width: 1000px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
 }
 
 .imageDefault {
-  background-image: url("./assets/image.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  height: 100%;
-  /* Высота равна высоте экрана */
-  width: 100%;
-  /* Ширина равна ширине блока */
+    background-image: url("./assets/image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 100%;
+    /* Высота равна высоте экрана */
+    width: 100%;
+    /* Ширина равна ширине блока */
 }
 
 .optionsContainer,
 .modelContainer,
 .descContainer {
-  flex-grow: 1;
-  padding: 20px;
-  margin: 20px;
-  box-sizing: border-box;
+    flex-grow: 1;
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
 }
 
 .optionsContainer {
-  grid-area: 1 / 1 / 3 / 2;
+    grid-area: 1 / 1 / 3 / 2;
 
-  @media (max-width: 1000px) {
-    grid-area: 1 / 1 / 2 / 2;
-  }
+    @media (max-width: 1000px) {
+        grid-area: 1 / 1 / 2 / 2;
+    }
 }
 
 .modelContainer {
-  grid-area: 1 / 2 / 3 / 3;
-
-  @media (max-width: 1000px) {
     grid-area: 1 / 2 / 3 / 3;
-  }
+
+    @media (max-width: 1000px) {
+        grid-area: 1 / 2 / 3 / 3;
+    }
 }
 
 .descContainer {
-  grid-area: 1 / 3 / 3 / 4;
+    grid-area: 1 / 3 / 3 / 4;
 
-  @media (max-width: 1000px) {
-    grid-area: 2 / 1 / 3 / 2;
-  }
+    @media (max-width: 1000px) {
+        grid-area: 2 / 1 / 3 / 2;
+    }
 }

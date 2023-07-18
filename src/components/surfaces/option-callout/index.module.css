@@ -1,6 +1,6 @@
 .optionButton {
     border: none;
-    margin: 15px;
+    display: inline;
     border-left: 4px solid #a2dfc2;
     background-color: transparent;
     color: #a2dfc2;
@@ -15,7 +15,15 @@
     transform: scale(1.2);
 }
 
-
 .callout {
-    background-color: transparent;
+    position: relative;
+    display: block;
+    margin: 25px;
+}
+
+.calloutContentBase {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    translate: 80px -90px;
 }

@@ -1,26 +1,24 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import styles from './index.module.css'
+import { DividerProps } from "@fluentui/react-components";
 
 interface IProps {
-  size: number;
-  color: string;
-  children: ReactNode;
+    size: number;
 }
 
-const HexagonLayout = (props: IProps) => {
-  const { size, color, children } = props;
+const HexagonLayout: React.FC<DividerProps & IProps> = (props) => {
+    const { size, children } = props;
 
-  const octagonStyle = {
-    width: `${size + 10}px`,
-    height: `${size}px`,
-    backgroundColor: color
-  };
+    const octagonStyle = {
+        width: `${size + 10}px`,
+        height: `${size}px`
+    };
 
-  return (
-    <div className={styles.octagon} style={octagonStyle}>
-      {children}
-    </div>
-  );
+    return (
+        <div className={`${styles.octagon} ${props.className}`} style={octagonStyle}>
+            {children}
+        </div>
+    );
 }
 
 export default HexagonLayout;

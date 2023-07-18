@@ -7,7 +7,7 @@ import { CiMobile3, CiSettings } from "react-icons/ci";
 import { GiArtificialHive } from "react-icons/gi";
 import { TbDatabaseExclamation } from "react-icons/tb";
 
-import { CapitalText, ContentSnippet, CryButton, CryScroll, FadingLine, HexagonGridLayout } from "../../components";
+import { CapitalText, ContentSnippet, CryButton, CryScroll } from "../../components";
 
 import useSound from "../../hooks/use-sound";
 import hoverSound from './../../assets/audio/click/click.mp3';
