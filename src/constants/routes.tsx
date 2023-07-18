@@ -8,7 +8,11 @@ import { PerspectLayout } from '../components/layout';
 
 export const Layout: React.FC<DividerProps> = (props) => {
     return (
-        <Outlet />
+        <BackgroundLayout>
+            <BaseLayout>
+                <Outlet />
+            </BaseLayout>
+        </BackgroundLayout>
     );
 }
 
@@ -16,7 +20,7 @@ export const pagesData: IRouterType[] = [
     {
         path: "/",
         element:
-        
+
             <PerspectLayout>
                 <MainMenu />
             </PerspectLayout>,

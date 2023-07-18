@@ -1,4 +1,4 @@
-import { CalloutBasic } from "./surfaces/callout";
-import { CalloutOption } from "./surfaces/option-callout";
+import { CalloutBasic } from "./callout";
+import { CalloutOption } from "./option-callout";
 
 export { CalloutBasic, CalloutOption };

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Callout, Link, mergeStyleSets, Text, FontWeights, DirectionalHint } from '@fluentui/react';
 import { useBoolean, useId } from '@fluentui/react-hooks';
-import { DefaultButton } from '@fluentui/react/lib/Button';
 import { IChild } from '../../../types/interfaces';
 import styles from "./index.module.css"
 
@@ -15,7 +14,7 @@ export const CalloutBasic: React.FunctionComponent<IChild> = (props) => {
 
     return (
         <>
-            <a className={styles.optionButton + " nav-link"}
+            <a href="#" className={styles.optionButton + " nav-link"}
                 id={buttonId}
                 onClick={toggleIsCalloutVisible}
             >

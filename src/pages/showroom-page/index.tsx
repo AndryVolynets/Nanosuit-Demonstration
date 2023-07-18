@@ -12,17 +12,37 @@ import {
     ModuleOption
 } from "../../components";
 
+import { LineDirections } from "../../types/enums";
+
 import ModelLayout from "../../graphic/effects/test";
+import myData from "./../../assets/test-data/pages/showroom/suit-options.json"
+
+import { Module, Item, Data } from "../../types/interfaces";
+
+
+const data: Data = myData;
+
+const GenerateHexagonGrid = () => {
+    return data.items.map((element, index) => (
+        <div key={index}>
+            <CalloutOption>
+                <HexagonGridLayout
+                    key={index}
+                    maxWidth={4}
+                    sizeSegments={70}
+                    modules={element.modules}
+                />
+            </CalloutOption>
+        </div>
+    ));
+}
 
 const ShowRoom = () => {
     return (
         <>
-            <ModelLayout />
             <div className={styles.adaptiveContainer}>
                 <div className={styles.optionsContainer}>
-                    <CalloutOption>
-                        <HexagonGridLayout xSegments={4} ySegments={1} sizeSegments={70} />
-                    </CalloutOption>
+                    {GenerateHexagonGrid()}
                 </div>
                 <div className={styles.modelContainer}>
                     <div>
@@ -35,9 +55,6 @@ const ShowRoom = () => {
                             <FadingLine thickness={3} width={'40%'} direction={LineDirections.left} />
 
                             <div style={{ marginTop: 10 }}>
-
-
-                                <FadingLine thickness={3} width={'40%'} direction={LineDirections.left} />
 
                                 <div style={{ marginTop: 10 }}>
                                     <ContentSnippet>
