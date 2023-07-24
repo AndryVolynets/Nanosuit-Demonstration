@@ -8,6 +8,7 @@ export interface Module {
 
 export interface Item {
     id: number;
+    icon: string;
     name: string;
     modules?: Module[];
 }

@@ -3,10 +3,11 @@
     "items": [
         {
             "id": 1,
+            "icon": "",
             "name": "Vision",
             "modules": [
                 {
-                    "Icon": "",
+                    "Icon": "https://cdn-icons-mp4.flaticon.com/512/6569/6569127.mp4",
                     "Title": "Модернизация сенсора",
                     "Description": "Модернизация сенсора для улучшения визуальных возможностей.",
                     "Features": [
@@ -36,6 +37,7 @@
         },
         {
             "id": 2,
+            "icon": "",
             "name": "Armor",
             "modules": [
                 {
@@ -78,6 +80,7 @@
         },
         {
             "id": 3,
+            "icon": "",
             "name": "Power",
             "modules": [
                 {
@@ -120,6 +123,7 @@
         },
         {
             "id": 4,
+            "icon": "",
             "name": "Silent",
             "modules": [
                 {
@@ -162,6 +166,7 @@
         },
         {
             "id": 5,
+            "icon": "",
             "name": "Speed",
             "modules": [
                 {

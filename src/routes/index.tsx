@@ -8,33 +8,30 @@ import { PerspectLayout, ShowroomLayout } from '../components/layout';
 
 export const Layout: React.FC<DividerProps> = (props) => {
     return (
-
-        <Outlet />
-
+        <BackgroundLayout>
+            <BaseLayout>
+                <PerspectLayout>
+                    <Outlet />
+                </PerspectLayout>
+            </BaseLayout>
+        </BackgroundLayout>
     );
 }
 
 export const pagesData: IRouterType[] = [
     {
         path: "/",
-        element:
-            <BackgroundLayout>
-                <BaseLayout>
-                    <PerspectLayout>
-                        <MainMenu />
-                    </PerspectLayout>
-                </BaseLayout>
-            </BackgroundLayout>,
+        element: <MainMenu />,
+        title: "home"
+    },
+    {
+        path: "/:settingName",
+        element: <MainMenu />,
         title: "home"
     },
     {
         path: "/showroom",
-        element:
-            <BackgroundLayout>
-                <BaseLayout>
-                    <ShowRoom />
-                </BaseLayout>
-            </BackgroundLayout>,
+        element: <ShowRoom />,
         title: "showroom"
     },
 ];

@@ -1,0 +1,25 @@
+.container {
+    display: inline-block;
+    padding: 10px;
+}
+
+.gridParent {
+    display: grid;
+}
+
+.parentHex {
+    background-color: rgba(175, 237, 205, 0);
+    color: rgb(175, 237, 205);
+}
+
+.childHex {
+    background-color: rgba(175, 237, 205, 0.3);
+    color: rgb(175, 237, 205);
+}
+
+.childHex>button {
+    border: none;
+    background-color: rgba(175, 237, 205, 0);
+    color: rgb(175, 237, 205);
+    padding: 10px;
+}
