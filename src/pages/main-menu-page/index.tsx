@@ -9,10 +9,6 @@ import { TbDatabaseExclamation } from "react-icons/tb";
 
 import { CapitalText, ContentSnippet, CryButton, CryScroll } from "../../components";
 
-import useSound from "../../hooks/use-sound";
-import hoverSound from './../../assets/audio/click/click.mp3';
-
-
 interface ICapitalText {
     to: string;
     text?: string;
@@ -44,12 +40,11 @@ const MainMenu = () => {
             icon: CiMobile3
         },
         {
-            to: "/showroom",
+            to: "/setting",
             text: "Настройки",
             icon: CiSettings
         }
     ];
-    const [handleMouseEnter, handleMouseLeave] = useSound(hoverSound);
 
     const CapitalTextList: React.FC = () => {
         return (
@@ -58,9 +53,7 @@ const MainMenu = () => {
                     <div key={index}>
                         <CapitalText
                             href={item.to}
-                            style={{ fontSize: 24 }}
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}>
+                            style={{ fontSize: 24 }}>
                             <span>
                                 <SingleStar />
                             </span>
@@ -72,35 +65,14 @@ const MainMenu = () => {
         );
     }
 
-
     return (
         <div className="container">
             <div className={styles.flexContainer}>
-                <div className={styles.flexLeft}>
-                    <div>
-                        <CapitalTextList />
-                    </div>
-
-                    <div className={styles.navButton}>
-                        <CryButton>
-                            Назад
-                        </CryButton>
-                    </div>
+                <div className={styles.flexItems}>
+                    <CapitalTextList />
                 </div>
-                <div >
-                    <ContentSnippet>
-                        <div style={{ padding: 10 }}>
-                            <CryScroll>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsum, odio veniam, tempore in cum suscipit saepe quibusdam consectetur sit consequatur eos, doloribus necessitatibus modi. Molestias similique enim quisquam odit.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsum, odio veniam, tempore in cum suscipit saepe quibusdam consectetur sit consequatur eos, doloribus necessitatibus modi. Molestias similique enim quisquam odit.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsum, odio veniam, tempore in cum suscipit saepe quibusdam consectetur sit consequatur eos, doloribus necessitatibus modi. Molestias similique enim quisquam odit.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsum, odio veniam, tempore in cum suscipit saepe quibusdam consectetur sit consequatur eos, doloribus necessitatibus modi. Molestias similique enim quisquam odit.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsum, odio veniam, tempore in cum suscipit saepe quibusdam consectetur sit consequatur eos, doloribus necessitatibus modi. Molestias similique enim quisquam odit.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsum, odio veniam, tempore in cum suscipit saepe quibusdam consectetur sit consequatur eos, doloribus necessitatibus modi. Molestias similique enim quisquam odit.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsum, odio veniam, tempore in cum suscipit saepe quibusdam consectetur sit consequatur eos, doloribus necessitatibus modi. Molestias similique enim quisquam odit.
-                            </CryScroll>
-                        </div>
-                    </ContentSnippet>
+                <div className={styles.flexItems}>
+
                 </div>
             </div>
         </div>
