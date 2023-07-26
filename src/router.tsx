@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { IRouterType } from './types/interfaces';
 import pagesData from './constants';
-import { Layout } from './constants/routes';
+import { Layout } from './routes';
 import { Error } from './pages';
 
 const Router = () => {

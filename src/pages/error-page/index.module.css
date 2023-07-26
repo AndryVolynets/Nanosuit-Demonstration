@@ -1,0 +1,15 @@
+.backgroundError {
+    background-image: url("./assets/7ac78b96661291.5eb33ea6011e4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    height: 100%;
+}
+  
+
+.display{
+    position:  absolute;
+    top: 60%;
+    left: 22%;
+    font-size: 120px
+}
