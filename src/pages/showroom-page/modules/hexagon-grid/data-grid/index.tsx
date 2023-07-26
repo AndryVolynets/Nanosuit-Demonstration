@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import styles from "./index.module.css";
 import { HexagonLayout } from "../../../../../components";
 import { Module } from "../../../../../types/interfaces";
+import { HexGrid, Layout, Hexagon, Text, Pattern, Path, Hex } from 'react-hexgrid';
+
+
 
 interface ISegment {
     sizeSegments: number;
