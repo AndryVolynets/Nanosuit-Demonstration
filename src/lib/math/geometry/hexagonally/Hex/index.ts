@@ -15,8 +15,9 @@ export interface Context {
  */
 export class Hex<TValue> {
     readonly coordinates: Cuboid;
-    value: TValue | undefined;
     readonly symbol: symbol;
+
+    value: TValue | undefined;
     context: Context | undefined;
 
     constructor(coordinates: Coordinates, value?: TValue) {
@@ -96,8 +97,11 @@ export class Hex<TValue> {
     }
 
     private static directions: Axial[] = [
-        { q: 1, r: 0 }, { q: 0, r: 1 },
-        { q: -1, r: 1 }, { q: -1, r: 0 },
-        { q: 0, r: -1 }, { q: 1, r: -1 }
+        { q: 1, r: 0 },
+        { q: 0, r: 1 },
+        { q: -1, r: 1 },
+        { q: -1, r: 0 },
+        { q: 0, r: -1 },
+        { q: 1, r: -1 }
     ];
 }

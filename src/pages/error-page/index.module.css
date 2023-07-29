@@ -2,14 +2,25 @@
     background-image: url("./assets/7ac78b96661291.5eb33ea6011e4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    object-fit: cover;
+    object-fit: contain;
     height: 100%;
+    width: 100%;
 }
-  
 
-.display{
-    position:  absolute;
-    top: 60%;
-    left: 22%;
-    font-size: 120px
+.display {
+    position: absolute;
+    top: 70%; /* Vertically center the element */
+    left: 30%; /* Horizontally center the element */
+    transform: translate(-50%, -50%); /* Adjust centering */
+    font-size: 8vw; /* Use viewport units for font size */
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for better visibility */
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .display {
+        font-size: 12vw;
+    }
 }

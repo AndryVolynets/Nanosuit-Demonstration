@@ -23,6 +23,7 @@ const SingleStar = () => {
 }
 
 const MainMenu = () => {
+    
     const capitalTextData: ICapitalText[] = [
         {
             to: "/showroom",
@@ -30,12 +31,12 @@ const MainMenu = () => {
             icon: GiArtificialHive
         },
         {
-            to: "/showroom",
+            to: "/archive",
             text: "Архивы Карла Раша",
             icon: TbDatabaseExclamation
         },
         {
-            to: "/showroom",
+            to: "/personal",
             text: "Личное дело",
             icon: CiMobile3
         },

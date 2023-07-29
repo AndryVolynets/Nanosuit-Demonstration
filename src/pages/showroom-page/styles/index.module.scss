@@ -21,9 +21,27 @@
     max-width: 100%;
 }
 
+.modelContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.optionsContainer,
+.descContainer {
+    z-index: 100;
+}
+
 .optionsContainer,
 .modelContainer,
 .descContainer {
+    display: inline;
     flex-grow: 1;
     padding: 20px;
     margin: 20px;
