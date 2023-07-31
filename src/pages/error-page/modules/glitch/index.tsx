@@ -1,6 +1,6 @@
-import React from 'react';
-import styles from './index.module.css';
-import { DividerProps } from '@fluentui/react-components';
+import React from 'react'
+import styles from './index.module.css'
+import { DividerProps } from '@fluentui/react-components'
 
 const GlitchEffect: React.FC<DividerProps> = ({ children }) => {
     return (
@@ -9,7 +9,7 @@ const GlitchEffect: React.FC<DividerProps> = ({ children }) => {
                 <span>{children}</span>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default GlitchEffect;
+export default GlitchEffect

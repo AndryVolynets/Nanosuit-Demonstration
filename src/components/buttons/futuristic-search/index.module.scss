@@ -1,48 +1,59 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 .kave {
-  &Btn {
-    position: relative;
-    border: solid 3px rgb(104, 150, 126);
-    background: linear-gradient(to bottom, rgb(113, 116, 103) 0%, rgb(17, 24, 20) 100%);
-    color: rgb(144, 199, 170);
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    font-weight: normal;
-    font-size: 16px;
-    letter-spacing: 1.8px;
-    width: 100%;
-    /* Используем относительную ширину */
-    max-width: 220px;
-    /* Ограничиваем максимальную ширину кнопки */
-    height: 40px;
-    /* Используем фиксированную высоту */
-    padding: 0;
-    transition: all 0.25s ease;
-    outline: none;
-    vertical-align: middle;
-    border-radius: 10px;
+    &Btn {
+        position: relative;
+        border: solid 3px rgb(104, 150, 126);
+        background: linear-gradient(
+            to bottom,
+            rgb(113, 116, 103) 0%,
+            rgb(17, 24, 20) 100%
+        );
+        color: rgb(144, 199, 170);
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 16px;
+        letter-spacing: 1.8px;
+        width: 100%;
+        /* Используем относительную ширину */
+        max-width: 220px;
+        /* Ограничиваем максимальную ширину кнопки */
+        height: 40px;
+        /* Используем фиксированную высоту */
+        padding: 0;
+        transition: all 0.25s ease;
+        outline: none;
+        vertical-align: middle;
+        border-radius: 10px;
 
-    cursor: pointer;
+        cursor: pointer;
 
-    svg {
-      margin-bottom: 3px;
-      margin-right: 1px;
-      color: rgb(144, 199, 170);
+        svg {
+            margin-bottom: 3px;
+            margin-right: 1px;
+            color: rgb(144, 199, 170);
+        }
+
+        &:hover {
+            border: solid 3px rgb(154, 213, 183);
+            color: rgb(154, 213, 183);
+            box-shadow: 0px 0px 8px rgb(200, 223, 206);
+            color: radial-gradient(
+                ellipse at center,
+                rgb(113, 116, 103) 0%,
+                rgb(154, 185, 162) 40%,
+                rgb(196, 221, 208) 50%,
+                rgb(235, 244, 241) 60%,
+                rgb(255, 255, 255) 100%
+            );
+            text-shadow: 0 0 1px rgb(200, 223, 206);
+
+            svg {
+                margin-bottom: 3px;
+                margin-right: 1px;
+                color: rgb(154, 213, 183);
+            }
+        }
     }
-
-    &:hover {
-      border: solid 3px rgb(154, 213, 183);
-      color: rgb(154, 213, 183);
-      box-shadow: 0px 0px 8px rgb(200, 223, 206);
-      color: radial-gradient(ellipse at center, rgb(113, 116, 103) 0%, rgb(154, 185, 162) 40%, rgb(196, 221, 208) 50%, rgb(235, 244, 241) 60%, rgb(255, 255, 255) 100%);
-      text-shadow: 0 0 1px rgb(200, 223, 206);
-
-      svg {
-        margin-bottom: 3px;
-        margin-right: 1px;
-        color: rgb(154, 213, 183);
-      }
-    }
-  }
 }

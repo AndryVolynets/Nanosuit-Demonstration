@@ -1,14 +1,14 @@
-type Mat2 = [number, number, number, number];
-const sqrt = Math.sqrt;
+type Mat2 = [number, number, number, number]
+const sqrt = Math.sqrt
 
 export class Orientation {
-    f: Mat2;
-    b: Mat2;
-    startAngle: number;
+    f: Mat2
+    b: Mat2
+    startAngle: number
 
     private constructor(f: Mat2, b: Mat2, startAngle: number) {
-        this.f = f;
-        this.b = b;
+        this.f = f
+        this.b = b
         this.startAngle = startAngle
     }
 

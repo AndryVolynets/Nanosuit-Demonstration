@@ -13,7 +13,7 @@
 }
 
 .childHex {
-    background-image: url("https://prod.assets.earlygamecdn.com/images/crysis-4-teaser-release-date.jpg?mtime=1643204544");
+    background-image: url('https://prod.assets.earlygamecdn.com/images/crysis-4-teaser-release-date.jpg?mtime=1643204544');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -21,7 +21,7 @@
     color: rgb(175, 237, 205);
 }
 
-.childHex>button {
+.childHex > button {
     border: none;
     background-color: rgba(175, 237, 205, 0);
     color: rgb(175, 237, 205);

@@ -1,7 +1,7 @@
-import { pagesData } from "./../routes";
+import { pagesData } from './../routes'
 
-export const DefaultColor = "#a2dfc2";
-export const HoverColor = "#ffa20a";
-export const TrafaretColor = "#11ffee00";
+export const DefaultColor = '#a2dfc2'
+export const HoverColor = '#ffa20a'
+export const TrafaretColor = '#11ffee00'
 
-export default pagesData;
+export default pagesData

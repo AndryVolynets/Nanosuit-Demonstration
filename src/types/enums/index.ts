@@ -1,1 +1,1 @@
-export { LineDirections } from "./LineDirections";
+export { LineDirections } from './LineDirections'

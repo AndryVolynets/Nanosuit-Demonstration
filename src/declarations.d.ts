@@ -14,6 +14,6 @@ declare module '*.module.sass' {
 }
 
 declare module '*.mp3' {
-    const src: string;
-    export default src;
+    const src: string
+    export default src
 }

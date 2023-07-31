@@ -1,5 +1,5 @@
 .backgroundError {
-    background-image: url("./assets/7ac78b96661291.5eb33ea6011e4.jpg");
+    background-image: url('./assets/7ac78b96661291.5eb33ea6011e4.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: contain;

@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react'
 import styles from './index.module.css'
-import { IntrinsicElements } from "../../../types/interfaces";
+import { IntrinsicElements } from '../../../types/interfaces'
 
-type LinkProps = IntrinsicElements["a"];
+type LinkProps = IntrinsicElements['a']
 
 const CapitalText: React.FC<LinkProps> = (props) => {
-    const { children } = props;
+    const { children } = props
 
     return (
         <a {...props} className={styles.capital}>
             {children}
         </a>
-    );
+    )
 }
 
-export default CapitalText;
+export default CapitalText
