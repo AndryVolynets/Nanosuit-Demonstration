@@ -1,0 +1,1 @@
+you need to put it into /public, not /dist. this should be the same for all bundlers and environments, /public is a standard.
