@@ -8,14 +8,12 @@ const Header = () => {
         <header>
             <nav
                 className="navbar navbar-expand-lg"
-                style={{ backgroundColor: 'transparent' }}
-            >
+                style={{ backgroundColor: 'transparent' }}>
                 <div className="container">
                     <a
                         className="navbar-brand"
                         href="#"
-                        style={{ color: '#a2dfc2' }}
-                    >
+                        style={{ color: '#a2dfc2' }}>
                         Navbar
                     </a>
                     <button
@@ -25,22 +23,19 @@ const Header = () => {
                         data-bs-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent"
                         aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
+                        aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div
                         className="collapse navbar-collapse"
-                        id="navbarSupportedContent"
-                    >
+                        id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <a
                                     className="nav-link active"
                                     aria-current="page"
                                     href="#"
-                                    style={{ color: '#a2dfc2' }}
-                                >
+                                    style={{ color: '#a2dfc2' }}>
                                     Home
                                 </a>
                             </li>
@@ -48,8 +43,7 @@ const Header = () => {
                                 <a
                                     className="nav-link"
                                     style={{ color: '#a2dfc2' }}
-                                    href="#"
-                                >
+                                    href="#">
                                     Link
                                 </a>
                             </li>
@@ -61,15 +55,13 @@ const Header = () => {
                                     id="navbarDropdown"
                                     role="button"
                                     data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                >
+                                    aria-expanded="false">
                                     Dropdown
                                 </a>
                                 <ul
                                     className="dropdown-menu"
                                     aria-labelledby="navbarDropdown"
-                                    style={{ color: '#a2dfc2' }}
-                                >
+                                    style={{ color: '#a2dfc2' }}>
                                     <li>
                                         <a className="dropdown-item" href="#">
                                             Action
@@ -96,8 +88,7 @@ const Header = () => {
                                     href="#"
                                     style={{ color: '#a2dfc2' }}
                                     tabIndex={-1}
-                                    aria-disabled="true"
-                                >
+                                    aria-disabled="true">
                                     Disabled
                                 </a>
                             </li>
